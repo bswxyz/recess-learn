@@ -61,7 +61,7 @@ gh repo create bswxyz/recess-learn --public --source . --push
 
   <span class="ey">Design showcase · build notes</span>
   <h1>How <em>Recess</em> bounces.</h1>
-  <p class="sub">Recess is the one site in the Fable showcase built on something else entirely —
+  <p class="sub">Recess is the one site in the Parable showcase built on something else entirely —
     <strong>SvelteKit</strong> — because its whole personality is <em>motion</em>, and Svelte's
     built-in spring physics is the cleanest way to make a page feel alive and bouncy.</p>
 

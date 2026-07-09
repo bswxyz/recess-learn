@@ -167,7 +167,7 @@
     </div>
     <div class="foot-bottom">
       <span>© 2026 Recess — a design-showcase concept, not a shipping app.</span>
-      <span>Designed &amp; built by Fable · <a href="{base}/guide/">How this was built →</a></span>
+      <span>Designed &amp; built by Parable · <a href="{base}/guide/">How this was built →</a></span>
     </div>
   </div>
 </footer>

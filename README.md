@@ -3,7 +3,7 @@
 **Live:** https://bswxyz.github.io/recess-learn/ · **Build notes:** https://bswxyz.github.io/recess-learn/guide/
 
 A kids' educational learning app landing site — spring-physics mascot, a winding lesson path, and a
-playable mini-lesson — part of the [Fable 25 design showcase](https://bswxyz.github.io/fable-hub/).
+playable mini-lesson — part of the [Parable 25 design showcase](https://bswxyz.github.io/fable-hub/).
 
 ---
 
@@ -92,5 +92,5 @@ component, the hold-to-enter gate (pointer + keyboard), and the full responsive/
 
 ## License
 
-[MIT](LICENSE). Design & build by **Fable** (Anthropic's Claude). All illustration is hand-authored
+[MIT](LICENSE). Design & build by **Parable** (Anthropic's Claude). All illustration is hand-authored
 SVG — no photos, no generated images.
