@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fff8ec" />
+  <meta name="color-scheme" content="light" />
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='54' r='34' fill='%23ff5a4d'/%3E%3Ccircle cx='39' cy='50' r='10' fill='%23fff'/%3E%3Ccircle cx='61' cy='50' r='10' fill='%23fff'/%3E%3Ccircle cx='40' cy='51' r='4.5' fill='%23232020'/%3E%3Ccircle cx='62' cy='51' r='4.5' fill='%23232020'/%3E%3Cpath d='M40 66 q10 9 20 0' stroke='%23232020' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link href="../_app/immutable/entry/start.JwBP3UMW.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/C_Pax_cz.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/D4SAAK_a.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CYMknZ0X.js" rel="modulepreload">
+		<link href="../_app/immutable/entry/app.BfD9KxS0.js" rel="modulepreload">
+		<link href="../_app/immutable/chunks/CibStn8P.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/0.DtBAOX7c.js" rel="modulepreload">
+		<link href="../_app/immutable/nodes/3.DD8KXceH.js" rel="modulepreload">
+		<title>How Recess was built — the guide</title><!-- HEAD_svelte-1h2grui_START --><meta name="description" content="Build notes for Recess: Svelte spring physics for the Pip mascot, the winding SVG lesson path, a playable count-the-apples mini-lesson, and shipping SvelteKit adapter-static to GitHub Pages."><meta name="theme-color" content="#fff8ec"><!-- HEAD_svelte-1h2grui_END -->
+		<link href="../_app/immutable/assets/0.BRpT6fco.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/3.jyEmrUAR.css" rel="stylesheet">
+</head>
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">   <div class="wrap svelte-hxzq2x"><div class="top svelte-hxzq2x" data-svelte-h="svelte-74tb7d"><a href="../" class="svelte-hxzq2x">← recess</a> <span>the guide · how it was built</span></div> <span class="ey svelte-hxzq2x" data-svelte-h="svelte-13ngc7g">Design showcase · build notes</span> <h1 class="svelte-hxzq2x" data-svelte-h="svelte-1v4mixp">How <em class="svelte-hxzq2x">Recess</em> bounces.</h1> <p class="sub svelte-hxzq2x" data-svelte-h="svelte-20m62x">Recess is the one site in the Fable showcase built on something else entirely —
+    <strong class="svelte-hxzq2x">SvelteKit</strong> — because its whole personality is <em class="svelte-hxzq2x">motion</em>, and Svelte&#39;s
+    built-in spring physics is the cleanest way to make a page feel alive and bouncy.</p> <span class="chip chip--red svelte-hxzq2x" data-svelte-h="svelte-jl13iq">Fredoka + Nunito</span> <span class="chip chip--blue svelte-hxzq2x" data-svelte-h="svelte-1az89js">SvelteKit</span> <span class="chip chip--green svelte-hxzq2x" data-svelte-h="svelte-135v0je">adapter-static</span> <span class="chip chip--yellow svelte-hxzq2x" data-svelte-h="svelte-1u8rutt">spring() &amp; tweened()</span> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-tfi6jc">The idea</h2> <p class="svelte-hxzq2x" data-svelte-h="svelte-11h6bgv">A learning app for four-to-eight-year-olds has to earn one feeling before it earns a single word of
+    copy: <em class="svelte-hxzq2x">delight</em>. Kids trust things that are round, soft, and responsive — things that squash when
+    you press them and bounce when you win. So the brief was never &quot;explain the curriculum.&quot; It was &quot;make
+    the page itself feel like a toy,&quot; and then let the honest, evidence-flavoured pitch live quietly in the
+    parents&#39; corner. Two audiences, two voices, one bouncy world.</p> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-pm4qca">The stack — why SvelteKit</h2> <ul class="svelte-hxzq2x" data-svelte-h="svelte-567ugt"><li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">Svelte&#39;s motion primitives are the point.</strong> <code class="svelte-hxzq2x">spring()</code> and
+      <code class="svelte-hxzq2x">tweened()</code> ship in the framework. No animation library, no keyframe math — you set a
+      target value and Svelte does the physics. For a site whose identity <em class="svelte-hxzq2x">is</em> springiness, that&#39;s
+      the perfect tool, and it proves the showcase isn&#39;t one framework wearing different paint.</li> <li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">Fredoka / Nunito, no mono.</strong> A chunky rounded display face and a rounded body face —
+      warm, legible, friendly. There&#39;s deliberately no monospace: nothing here is technical or grown-up.
+      Nunito even sets the big lesson numbers.</li> <li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">SvelteKit + <code class="svelte-hxzq2x">adapter-static</code></strong> prerenders every route to plain HTML, so the
+      whole thing deploys to GitHub Pages as static files — no server, no runtime.</li></ul> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-oqsmuu">Signature technique #1 — a spring-driven mascot</h2> <p class="svelte-hxzq2x" data-svelte-h="svelte-h2v29u">Pip is authored entirely in SVG — a circle body, two big eyes, little limbs. What makes him feel alive
+    is that his pupils and whole body are driven by springs that chase the cursor. You never set a
+    position directly; you set a <em class="svelte-hxzq2x">target</em>, and the spring eases there with a natural overshoot:</p> <pre class="svelte-hxzq2x"><code class="svelte-hxzq2x">import { spring } from 'svelte/motion';
+
+// two springs give Pip his life: the pupils and a whole-body lean
+const pupil = spring({ x: 0, y: 0 }, { stiffness: 0.12, damping: 0.5 });
+const lean  = spring({ x: 0, y: 0, r: 0 }, { stiffness: 0.08, damping: 0.55 });
+
+function onMove(e) {
+  const r  = host.getBoundingClientRect();
+  const dx = (e.clientX - (r.left + r.width  / 2)) / (innerWidth  / 2);
+  const dy = (e.clientY - (r.top  + r.height * 0.46)) / (innerHeight / 2);
+  pupil.set({ x: clamp(dx) * 8, y: clamp(dy) * 6 });  // eyes chase the cursor
+  lean.set({  x: clamp(dx) * 6, y: clamp(dy) * 3, r: clamp(dx) * 3 });
+}</code></pre> <p class="svelte-hxzq2x" data-svelte-h="svelte-13wc3ri">He blinks on a random timer, glances around when the pointer goes still, and — the payoff — does a
+    happy-bounce when you answer the mini-lesson correctly. Every one of those springs checks the user&#39;s
+    motion preference first:</p> <pre class="svelte-hxzq2x"><code class="svelte-hxzq2x">// every spring in the site respects "reduce motion" by jumping instantly
+export function springTo(store, value) {
+  return store.set(value, prefersReduced() ? { hard: true } : {});
+}
+
+// Pip's happy-bounce, called by the mini-lesson on a correct answer
+const hop = spring(0, { stiffness: 0.11, damping: 0.28 });
+export async function celebrate() {
+  if (prefersReduced()) return;   // stay calm
+  await hop.set(1);               // spring up — overshoots, wobbles
+  hop.set(0);                     // …then settles back down
+}</code></pre> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-1asove1">Signature technique #2 — the winding lesson path</h2> <p class="svelte-hxzq2x" data-svelte-h="svelte-ggrazs">Straight from the Duolingo-ABC playbook: a dotted SVG trail snakes down the page with lesson nodes on
+    it — <strong class="svelte-hxzq2x">done</strong> (a green ✓), <strong class="svelte-hxzq2x">current</strong> (a pulsing yellow star with Pip&#39;s
+    &quot;Start here&quot; bubble), and <strong class="svelte-hxzq2x">locked</strong> (a padlock). Each node is its own component driven by
+    a <code class="svelte-hxzq2x">tweened</code> store with a <code class="svelte-hxzq2x">backOut</code> easing — the same bouncy overshoot a spring
+    gives, but time-based, so a throttled background tab can never make it diverge. A scroll trigger flips
+    the nodes on with a staggered delay so they <em class="svelte-hxzq2x">pop</em> into place one after another. The decorative
+    SVG is mirrored by a visually-hidden ordered list, so a screen reader hears the journey as real
+    content.</p> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-1erb8vj">Signature technique #3 — a playable mini-lesson</h2> <p class="svelte-hxzq2x" data-svelte-h="svelte-svz3nf">&quot;Count the apples&quot; is a real, working lesson embedded in the marketing page. Tap the right number and
+    you get a canvas confetti burst, Pip&#39;s happy-bounce, and a warm word; tap a wrong one and the button
+    gives a gentle wobble and a &quot;count again, you&#39;ve got this&quot; — never a buzzer, never a loss. The choices
+    are real <code class="svelte-hxzq2x">&lt;button&gt;</code> elements: fully keyboard-operable, and every result is announced
+    through an <code class="svelte-hxzq2x">aria-live</code> region for screen-reader users.</p> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-1h0uvea">Details that matter</h2> <ul class="svelte-hxzq2x" data-svelte-h="svelte-dmgtzn"><li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">Reduced motion is wired all the way down.</strong> The CSS media query calms transitions and
+      the floating shapes, <em class="svelte-hxzq2x">and</em> the JavaScript springs jump instantly — so a child prone to motion
+      sickness gets a still, fully-usable page, not a broken one.</li> <li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">Contrast holds up.</strong> Text sits as dark ink on cream, white, and yellow; the saturated
+      red / blue / green are used behind large, bold type or as shapes, never as small body text.</li> <li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">Big tap targets, real focus rings.</strong> Every control clears 44px with room to spare, and
+      <code class="svelte-hxzq2x">:focus-visible</code> paints a chunky blue outline you can actually see across a room.</li> <li class="svelte-hxzq2x"><strong class="svelte-hxzq2x">The parent gate is the joke made real.</strong> &quot;Press and hold&quot; is exactly the friction a
+      toddler won&#39;t sit through — a charming take on the App Store kids-category gate — and it&#39;s operable by
+      mouse, touch, <em class="svelte-hxzq2x">and</em> keyboard (hold Enter).</li></ul> <h2 class="svelte-hxzq2x" data-svelte-h="svelte-1xrkycv">Ship it on GitHub Pages</h2> <p class="svelte-hxzq2x" data-svelte-h="svelte-wmbej8">The trick with a framework site on project Pages is two settings: send the build into <code class="svelte-hxzq2x">/docs</code>,
+    and prefix every path with the repo name. <code class="svelte-hxzq2x">adapter-static</code> does the first; <code class="svelte-hxzq2x">paths.base</code>
+    does the second (and dev keeps it empty so localhost still works):</p> <pre class="svelte-hxzq2x"><code class="svelte-hxzq2x">import adapter from '@sveltejs/adapter-static';
+const dev = process.argv.includes('dev');
+
+export default {
+  kit: {
+    // write the prerendered site straight into /docs for GitHub Pages
+    adapter: adapter({ pages: 'docs', assets: 'docs', fallback: undefined, strict: true }),
+    // every asset + link is prefixed with the repo name in production
+    paths: { base: dev ? '' : '/recess-learn' }
+  }
+};</code></pre> <p class="svelte-hxzq2x" data-svelte-h="svelte-1wyechk">After that it&#39;s build, commit the <code class="svelte-hxzq2x">docs/</code> folder, and point Pages at it:</p> <pre class="svelte-hxzq2x"><code class="svelte-hxzq2x">npm run build             # → docs/index.html + docs/guide/index.html
+git add -A &amp;&amp; git commit -m "Recess — kids' learning app"
+gh repo create bswxyz/recess-learn --public --source . --push
+# GitHub → Settings → Pages → Branch: main · Folder: /docs
+# live at https://bswxyz.github.io/recess-learn/</code></pre> <p class="svelte-hxzq2x" data-svelte-h="svelte-m6d750">A <code class="svelte-hxzq2x">static/.nojekyll</code> file rides along into <code class="svelte-hxzq2x">docs/</code> so Pages serves SvelteKit&#39;s
+    <code class="svelte-hxzq2x">_app/</code> folder untouched. That&#39;s the whole deploy.</p> <hr class="rule svelte-hxzq2x"> <p class="fine svelte-hxzq2x" data-svelte-h="svelte-uf08xb">Recess is a design-showcase concept — there&#39;s no real curriculum, accounts, or app behind
+    it. See the repository README for the full demo-vs-real map.</p> <a class="back svelte-hxzq2x" href="../" data-svelte-h="svelte-17gf7br">← Back to Recess</a> </div> 
+			
+			<script>
+				{
+					__sveltekit_16yzj5g = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						assets: "/recess-learn"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("../_app/immutable/entry/start.JwBP3UMW.js"),
+						import("../_app/immutable/entry/app.BfD9KxS0.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 3],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+</body>
+</html>
