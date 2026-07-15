@@ -1,9 +1,41 @@
-# Recess
+<!-- parable:beautified -->
+<div align="center">
 
-**Live:** https://bswxyz.github.io/recess-learn/ · **Build notes:** https://bswxyz.github.io/recess-learn/guide/
+<h1>Recess</h1>
+
+<p><strong>Kids' learning app — spring-physics mascot + a playable lesson.</strong></p>
+
+<p>
+  <a href="https://bswxyz.github.io/recess-learn/"><img alt="Live demo" src="https://img.shields.io/badge/demo-live-8b5cf6?style=flat-square&labelColor=1a1a1a"></a>
+  <img alt="Family" src="https://img.shields.io/badge/family-Parable-ec4899?style=flat-square&labelColor=1a1a1a">
+  <img alt="Stack" src="https://img.shields.io/badge/stack-SvelteKit-f5a623?style=flat-square&labelColor=1a1a1a">
+  <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/license-MIT-22c55e?style=flat-square&labelColor=1a1a1a"></a>
+</p>
+
+<p>
+  <a href="https://bswxyz.github.io/recess-learn/"><b>Live demo</b></a>
+  &nbsp;·&nbsp;
+  <a href="https://bswxyz.github.io/recess-learn/guide/">Build notes</a>
+  &nbsp;·&nbsp;
+  <a href="https://parable-three.vercel.app/templates">More templates</a>
+</p>
+
+<a href="https://bswxyz.github.io/recess-learn/">
+  <img src=".github/preview.jpg" alt="Recess — live preview" width="100%">
+</a>
+
+</div>
+
+**Use this template** — copy the source into a new project:
+
+```bash
+npx degit bswxyz/recess-learn my-app
+```
+
+
 
 A kids' educational learning app landing site — spring-physics mascot, a winding lesson path, and a
-playable mini-lesson — part of the [Parable 25 design showcase](https://bswxyz.github.io/fable-hub/).
+playable mini-lesson — part of the [Parable 25 design showcase](https://parable-three.vercel.app).
 
 ---
 
@@ -92,5 +124,5 @@ component, the hold-to-enter gate (pointer + keyboard), and the full responsive/
 
 ## License
 
-[MIT](LICENSE). Design & build by **Parable** (Anthropic's Claude). All illustration is hand-authored
+[MIT](LICENSE). Design & build by **Parable**. All illustration is hand-authored
 SVG — no photos, no generated images.
